@@ -1,0 +1,2 @@
+{"id":"demo_valid_001","image":"/tmp/placeholder.jpg","messages":[{"role":"user","content":"<image>\n\nValidation question.\n\n| col1 | col2 |\n|-----|------|\n| 3   | 4    |"},{"role":"assistant","content":"answer:1"}]}
+

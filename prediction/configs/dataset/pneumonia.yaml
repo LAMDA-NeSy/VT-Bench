@@ -1,0 +1,53 @@
+# @package _global_
+defaults:
+ - _self_
+
+target: pneumonia
+task: classification
+
+num_classes: 2
+weights:
+live_loading: True  # whether to load images from a list of paths (instead of a list of .pt)
+delete_segmentation: False  # whether to delete the first channel of a three channel image
+balanced_accuracy: False
+eval_metric: acc
+data_orig:
+low_data_splits: ['']
+
+# num of features
+num_cat: 2
+num_con: 11
+
+labels_train: train_labels.pt
+labels_val: valid_labels.pt
+
+data_train_imaging: train_paths.pt
+data_val_imaging: valid_paths.pt
+
+# data_train_imaging: train_images_all_views.pt
+# data_val_imaging: val_images_all_views.pt
+
+data_train_tabular: train_features.csv
+data_val_tabular: valid_features.csv
+
+field_lengths_tabular: tabular_lengths.pt
+
+
+data_train_eval_tabular: train_features.csv
+labels_train_eval_tabular: train_labels.pt
+
+data_val_eval_tabular: valid_features.csv
+labels_val_eval_tabular: valid_labels.pt
+
+data_test_eval_tabular: test_features.csv
+labels_test_eval_tabular: test_labels.pt
+
+
+data_train_eval_imaging: train_paths.pt
+labels_train_eval_imaging: train_labels.pt
+
+data_val_eval_imaging: valid_paths.pt
+labels_val_eval_imaging: valid_labels.pt
+
+data_test_eval_imaging: test_paths.pt
+labels_test_eval_imaging: test_labels.pt

@@ -1,0 +1,28 @@
+prediction/results/
+prediction/outputs/
+LLaMA-Factory/
+
+# Local caches and OS/editor artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+.DS_Store
+
+# Local secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+
+# Model/data artifacts and experiment outputs
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+wandb/
+outputs/
+prediction/unimodal/outputs/
+prediction/unimodal/result/
+
+# Derived medical prompt/evidence dumps
+reasoning/ehrxqa/stage2/split_prompts.json

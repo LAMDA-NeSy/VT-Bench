@@ -1,0 +1,53 @@
+# @package _global_
+defaults:
+ - _self_
+
+target: adoption
+task: classification
+
+num_classes: 5
+weights:
+live_loading: True  # whether to load images from a list of paths (instead of a list of .pt)
+delete_segmentation: False  # whether to delete the first channel of a three channel image
+balanced_accuracy: False
+eval_metric: acc
+data_orig:
+low_data_splits: ['']
+
+# num of features
+num_cat: 1
+num_con: 24
+
+labels_train: labels_train.pt
+labels_val: labels_valid.pt
+
+data_train_imaging: paths_train.pt
+data_val_imaging: paths_valid.pt
+
+# data_train_imaging: train_images_all_views.pt
+# data_val_imaging: val_images_all_views.pt
+
+data_train_tabular: features_train.csv
+data_val_tabular: features_valid.csv
+
+field_lengths_tabular: tabular_lengths.pt
+
+
+data_train_eval_tabular: features_train.csv
+labels_train_eval_tabular: labels_train.pt
+
+data_val_eval_tabular: features_valid.csv
+labels_val_eval_tabular: labels_valid.pt
+
+data_test_eval_tabular: features_test.csv
+labels_test_eval_tabular: labels_test.pt
+
+
+data_train_eval_imaging: paths_train.pt
+labels_train_eval_imaging: labels_train.pt
+
+data_val_eval_imaging: paths_valid.pt
+labels_val_eval_imaging: labels_valid.pt
+
+data_test_eval_imaging: paths_test.pt
+labels_test_eval_imaging: labels_test.pt

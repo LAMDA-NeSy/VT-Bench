@@ -1,0 +1,51 @@
+# @package _global_
+defaults:
+ - _self_
+
+target: los
+task: regression
+
+num_classes: 1
+weights:
+live_loading: True
+delete_segmentation: False
+balanced_accuracy: False
+eval_metric: mae
+data_orig:
+low_data_splits: ['']
+
+# num of features
+num_cat: 4
+num_con: 14
+
+labels_train: train_labels.pt
+labels_val: val_labels.pt
+
+data_train_imaging: train_paths.pt
+data_val_imaging: val_paths.pt
+
+
+data_train_tabular: train_features.csv
+data_val_tabular: val_features.csv
+
+field_lengths_tabular: tabular_lengths.pt
+
+
+data_train_eval_tabular: train_features.csv
+labels_train_eval_tabular: train_labels.pt
+
+data_val_eval_tabular: val_features.csv
+labels_val_eval_tabular: val_labels.pt
+
+data_test_eval_tabular: test_features.csv
+labels_test_eval_tabular: test_labels.pt
+
+
+data_train_eval_imaging: train_paths.pt
+labels_train_eval_imaging: train_labels.pt
+
+data_val_eval_imaging: val_paths.pt
+labels_val_eval_imaging: val_labels.pt
+
+data_test_eval_imaging: test_paths.pt
+labels_test_eval_imaging: test_labels.pt

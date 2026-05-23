@@ -1,0 +1,19 @@
+# VLMs Prediction 数据集目录
+# ===========================
+#
+# 请将你的数据集放在此目录下
+#
+# 目录结构示例:
+#
+#   datasets/
+#   └── mydata/
+#       ├── train.jsonl      (必需)
+#       ├── val.jsonl        (推荐)
+#       ├── test.jsonl       (推荐)
+#       ├── test_image_only.jsonl  (消融实验用)
+#       └── test_table_only.jsonl  (消融实验用)
+#
+# JSONL 格式:
+#   {"id": "001", "image": "/path/to/img.jpg", "messages": [{"role": "user", "content": "<image>\n问题..."}, {"role": "assistant", "content": "answer:0"}]}
+#
+# 详细说明请参考 README.md
